@@ -1,0 +1,8 @@
+---
+title: Welcome to Middleman
+---
+
+%ul
+  - sitemap.resources.each do |x|
+    - if x.path.start_with?('courses')
+      %li= link_to x.data.title, x.path
