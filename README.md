@@ -2,9 +2,9 @@
 
 For lots more info, read this: http://joshuapaling.com/post/rails-camp-micro-courses
 
-There's already a plethora of resources for learning programming. However, the idea of these MicroCourses is very specific.
+There's already a plethora of resources for learning programming. However, MicroCourses are very specific.
 
-Early on, we want to hold tight to the original goals and intention of MicroCourses, and maintain a narrow focus, to avoid a mess.
+Especially in the early stages of this project, we want to hold tight to the original goals and intention of MicroCourses, and maintain a narrow focus, to avoid a mess.
 
 ## MicroCourses in a Nutshell
 
@@ -29,8 +29,27 @@ Since these events are free and / or relatively unstructured, people can't be de
 ### Ideally, a MicroCourse should also be:
 
 * **Discrete / self-contained:** Minimal 'baggage' or dependencies in terms of prior experience / assumed knowledge / stuff to install.
-* **Adaptable**. It can easily be adapted, on the fly, to varying levels of ability, from total coding beginner through to intermediate. (Perhaps courses have some 'advanced excercies' at the end or something)
+* **Adaptable**. It can easily be adapted, on the fly, to varying levels of ability, from total coding beginner through to intermediate. (Intermediate devs can wiz through or skip the easy steps)
 * **Impromtuable**. It can be picked up by an intermediate to experienced dev, and taught impromptu, without more than a few minutes preparation.
 * **Small-groupable**. It is suitable for a 1-1 environment, or a small group (eg. 2 - 4 people of relatively similar ability)
 * **Pass-on-able**. Once a beginner has taken a MicroCourse, it would be awesome if they could teach, or at least assist in teaching, a future session of that MicroCourse.
 * **A4-pageable**. The basic MicroCourse curriculum (excluding code) should be printable on 1-2 sheets of A4 paper. It provides the outline, the teacher fills in the detail ad hoc.
+* 
+## Good and Bad Example MicroCourses
+
+### Good 1: Coding a Ruby ATM
+
+Small (1 Ruby class). Could be taught with no preparation. Easily adaptable to student's ability. Eg - the most simple case might be to imagine an ATM with $5 notes only. Accept an amout to withrdaw, and return the number of $5 notes required. As more requirements and / or restrictions are added, more complex cases might require recursion, refactoring, and thought about writing future-proof code.
+
+### Good 2: Git Fundamentals
+
+Could be taught with no preparation. Easily adaptable - eg. cover things as simple as basic commits, right up to interactive re-basing for more experienced students. Very practical for Rails development. Self-contained (you could work with a simple HelloWorld.txt file to keep the focus on Git and not on code).
+
+### Bad 1: An Introduction to MVC
+
+Bad because it'd be mainly theoretical, not practical. It would be hard to make it hands-on, and would be hard to cover in a self-contained way, within 2 hours.
+
+### Bad 2: Building your own Blog / ToDo / Other Small App
+
+Great idea for a course, but bad for a MicroCourse. Will take longer than 2 hours. Covers a broad range of topics. Not focused enough.
+
