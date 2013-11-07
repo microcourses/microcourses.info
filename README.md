@@ -59,7 +59,7 @@ Could be taught with no preparation. Easily adaptable - eg. cover things as simp
 
 ### Bad 1: An Introduction to MVC
 
-Bad because it'd be mainly theoretical, not practical. It would be hard to make it hands-on, and would be hard to cover in a self-contained way, within 2 hours.
+Important to know, and good for a talk. But bad as a MicroCourse, because it'd be mainly theoretical, not practical. It would be hard to make it hands-on, and would be hard to cover in a self-contained way, within 2 hours.
 
 ### Bad 2: Building your own Blog / ToDo / Other Small App
 
