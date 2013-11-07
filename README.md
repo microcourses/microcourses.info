@@ -15,17 +15,17 @@ For now, MicroCourses should only teach Ruby on Rails web development and direct
 ### The Goal of MicroCourses
 
 * 1. To allow friendships and informal mentoring relationships to organically form between newbies and advanced devs. This is the primary goal.
-* 2. To teach fun, practical aspects of Ruby on Rails web development in a fun, hands-on, interactive way.
+* 2. To teach practical aspects of Ruby on Rails web development in a hands-on, interactive way.
 
 ### Not the Goal of MicroCourses
 
-Initially, MicroCourses don't aim to provide a complete solution to learning the whole Rails stack. Textbooks already provide that, and it would be too ambitions for the MicroCoures format (unstructured environment, short course, little preparation and commitment). Furthermore, although some aspects might be great to cover in a MicroCourse, others might be better taught through a different format.
+Initially, MicroCourses don't aim to provide a complete solution to learning the whole Rails stack. Textbooks already provide that, and it would be too ambitions a goal given the MicroCoures format & restrictions (more info futher down).
 
 Initially, an event might only offer 5 or 6 MicroCourses, unrealated to each other. This may change as we see how MicroCourses work in practice.
 
 ## Holding a MicroCourse
 
-At a meetup like RailsCamp, Dev Hub, or Rails Girls, an experienced developer would teach a MicroCourse to a small number (eg. 1 - 4) students. Rather than holding a *MicroCourse*, you'd be holding a *MicroCourses Session*. So, there could be several different MicroCourses taught at a single event, at the same time.
+At a meetup like RailsCamp, Dev Hub, or Rails Girls, an experienced developer would teach a MicroCourse to a small number (eg. 1 - 4) students. Rather than holding a *MicroCourse*, you'd be holding a *MicroCourses Session*. People could choose which course they want to take / teach,and there might be several different MicroCourses run at the same time.
 
 ## Restrictions of the Environment
 
