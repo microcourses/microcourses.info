@@ -14,8 +14,8 @@ For now, MicroCourses should only teach Ruby on Rails web development and direct
 
 ### The Goal of MicroCourses
 
-* 1. To allow friendships and informal mentoring relationships to organically form between newbies and advanced devs. This is the primary goal.
-* 2. To teach practical aspects of Ruby on Rails web development in a hands-on, interactive way.
+1. To allow friendships and informal mentoring relationships to organically form between newbies and advanced devs. This is the primary goal.
+2. To teach practical aspects of Ruby on Rails web development in a hands-on, interactive way.
 
 ### Not the Goal of MicroCourses
 
