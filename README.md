@@ -57,9 +57,15 @@ Small (1 Ruby class). Could be taught with no preparation. Easily adaptable to s
 
 Could be taught with no preparation. Easily adaptable - eg. cover things as simple as basic commits, right up to interactive re-basing for more experienced students. Very practical for Rails development. Self-contained (you could work with a simple HelloWorld.txt file to keep the focus on Git and not on code).
 
-### Bad 1: An Introduction to MVC
+### In between: An Introduction to MVC
 
-Important to know, and good for a talk. But bad as a MicroCourse, because it'd be mainly theoretical, not practical. It would be hard to make it hands-on, and would be hard to cover in a self-contained way, within 2 hours.
+Important to know, and good for a talk. But mainly theoretical, not practical.
+For it to be a microcourse, it would need to be explained in the most practical manner. 
+
+### Bad 1: A 2-hours lecture in the benefits of Garbage Collection in Memory Management
+
+Way too theoratical,
+Way too premature given the audience.
 
 ### Bad 2: Building your own Blog / ToDo / Other Small App
 
