@@ -34,7 +34,8 @@ Since these events are free and / or relatively unstructured, people can't be de
 * **Small-groupable**. It is suitable for a 1-1 environment, or a small group (eg. 2 - 4 people of relatively similar ability)
 * **Pass-on-able**. Once a beginner has taken a MicroCourse, it would be awesome if they could teach, or at least assist in teaching, a future session of that MicroCourse.
 * **A4-pageable**. The basic MicroCourse curriculum (excluding code) should be printable on 1-2 sheets of A4 paper. It provides the outline, the teacher fills in the detail ad hoc.
-* 
+
+
 ## Good and Bad Example MicroCourses
 
 ### Good 1: Coding a Ruby ATM
