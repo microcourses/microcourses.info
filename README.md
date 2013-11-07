@@ -8,7 +8,7 @@ Early on, we want to hold tight to the original goals and intention of MicroCour
 
 ## MicroCourses in a Nutshell
 
-A MicroCourse is a self-contained, short (1-2 hr), hands-on programming excercise, that can be done by a new to intermediate developer, with the assistance of an experienced developer.
+A MicroCourse is a self-contained, short (1-2 hr), hands-on, Rails-related course, that can be done by a new to intermediate developer, with the assistance of an experienced developer.
 
 For now, MicroCourses should only teach Ruby on Rails web development and directly related topics (eg. Git, Sass, CoffeeScript).
 
