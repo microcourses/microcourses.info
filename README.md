@@ -59,13 +59,14 @@ Could be taught with no preparation. Easily adaptable - eg. cover things as simp
 
 ### In between: An Introduction to MVC
 
-Important to know, and good for a talk. But mainly theoretical, not practical.
+Important to know, and good for a talk. But mainly theoretical, not practical.  
 For it to be a microcourse, it would need to be explained in the most practical manner. 
 
 ### Bad 1: A 2-hours lecture in the benefits of Garbage Collection in Memory Management
 
-Way too theoratical,
-Way too premature given the audience.
+Way too theoratical,  
+Way too premature,  
+boring (given the audience).
 
 ### Bad 2: Building your own Blog / ToDo / Other Small App
 
