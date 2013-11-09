@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 require 'lib/helpers/custom_helpers'
 helpers CustomHelpers
 
