@@ -72,3 +72,13 @@ boring (given the audience).
 
 Great idea for a course, but bad for a MicroCourse. Will take longer than 2 hours. Covers a broad range of topics. Not focused enough.
 
+## Contributing
+We are always looking to improve and add to the Microcourses.
+If you can write a good support material, please, do.
+Usual drill:
+1. Fork
+2. Create a Topic Branch
+  * `bundle install` to fetch the gems
+  * `middleman` to launch the develoment web server
+  * visits `http://0.0.0.0:4567` 
+3. Send a Pull request
