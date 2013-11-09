@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 require 'lib/helpers/custom_helpers'
 helpers CustomHelpers
 
@@ -18,7 +17,7 @@ set :markdown, {
   :autolink => true,
 }
 
-ignore "/courses/_template.md.erb"
+ignore "/courses/_template*"
 
 # Code highlighting
 activate :rouge_syntax
