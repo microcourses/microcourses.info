@@ -23,3 +23,11 @@ courses all have their place.
 
 Initially, an event might only offer a few microcourses, unrelated to each
 other. This may change as we see how they work in practice.
+
+## Courses
+
+<% sitemap.resources.each do |page| %>
+  <% if page.path.start_with?('courses/') %>
+  * <%= link_to page.data.title, url_for(page) %>
+  <% end %>
+<% end %>

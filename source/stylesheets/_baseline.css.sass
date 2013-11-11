@@ -1,0 +1,47 @@
+@import vars
+
+body
+  font-family: $body-font-stack
+
+h1
+  font-family: $title-font-stack
+  font-weight: 400
+  font-size: 7em
+  text-align: center
+  span.subtitle
+    font-family: $body-font-stack
+    display: block
+    color: #999
+  span.small
+    font-size: 0.2em
+  a
+    text-decoration: none
+    color: inherit
+
+nav
+  ul
+    margin: 0
+    padding: 0
+    list-style: none
+    overflow: auto
+    margin-left: -$gap
+    margin-right: -$gap
+    li
+      display: inline-block
+      float: left
+      padding: 0 $gap
+
+.container
+  margin: 0 auto
+  width: 90%
+  max-width: 900px
+
+pre
+  font: $mono-font-stack
+  font-size: 0.9em
+  padding: $gap
+  border-radius: $border-radius
+
+@media print
+  html
+    font-size: 8px

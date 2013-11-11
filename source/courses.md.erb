@@ -1,9 +1,0 @@
----
-title: Courses
----
-
-<% sitemap.resources.each do |page| %>
-  <% if page.path.start_with?('courses/') %>
-  * <%= link_to page.data.title, url_for(page) %>
-  <% end %>
-<% end %>
