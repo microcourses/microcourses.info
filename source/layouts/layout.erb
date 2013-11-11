@@ -11,7 +11,8 @@
 
     <%= stylesheet_link_tag "normalize", "all", "highlight" %>
     <%= javascript_include_tag  "all" %>
-<link href='http://fonts.googleapis.com/css?family=Engagement|Source+Code+Pro:400,600|Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+    <%# <link href='http://fonts.googleapis.com/css?family=Engagement|Source+Code+Pro:400,600|Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'> %>
+    <link href='http://fonts.googleapis.com/css?family=Just+Me+Again+Down+Here' rel='stylesheet' type='text/css'>
   </head>
 
   <body class="<%= page_classes %>">
@@ -19,6 +20,11 @@
       <%= partial "layouts/gh_ribbon" %>
       <%= partial "layouts/header" %>
       <%= partial "layouts/nav" %>
+
+      <% if current_page.data.title %>
+        <h2 class="page-title"><%= current_page.data.title %></h2>
+      <% end %>
+
       <%= yield %>
       <%= partial "layouts/footer" %>
     </div>

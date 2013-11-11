@@ -2,8 +2,6 @@
 title: Courses
 ---
 
-## <%= current_page.data.fetch("title"){""}.to_s %>
-
 <% sitemap.resources.each do |page| %>
   <% if page.path.start_with?('courses/') %>
   * <%= link_to page.data.title, url_for(page) %>
