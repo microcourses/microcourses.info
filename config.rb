@@ -22,6 +22,9 @@ ignore "/courses/_template*"
 # Code highlighting
 activate :rouge_syntax
 
+# Allow deployment to a subdirectory such as /microcourses/.
+activate :relative_assets
 
 configure :build do
+  set :relative_links, true
 end
