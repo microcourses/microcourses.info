@@ -5,8 +5,8 @@ stream: rails
 layout: course
 requirements:
   - ruby command, rails command
-  - rails basic knowledge
-  - spreadsheets basic knowledge
+  - rails basics
+  - spreadsheets basics
 concepts:
   - relational database tables
   - foreign keys
