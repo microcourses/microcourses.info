@@ -15,21 +15,32 @@
 
   <body class="<%= page_classes %>">
     <div class="course container">
+      <div class="course-header">
         <h2 class="course-title">
-          <% if current_page.data.title %><%= current_page.data.title %> - <% end %>
-          <%= link_to 'Microcourses', url_for('/index.html') %>
+          <% if current_page.data.title %><%= current_page.data.title %><% end %>
         </h2>
-      <% if current_page.data.duration %>
-        <div class="course-duration"><b>Est. Duration:</b> <%= current_page.data.duration %></div>
-      <% end %>
-      <% if current_page.data.requirements %>
-        <div class="course-requirements"><b>Requirements:</b> <%= current_page.data.requirements.join(', ') %></div>
-      <% end %>
+        <%= link_to 'Microcourses', url_for('/index.html'), class: 'home-link' %>
+      </div>
+      <div class="course-metadata">
+        <% if current_page.data.duration %>
+          <div class="course-duration"><b>Duration:</b> <%= current_page.data.duration %> of mentoring</div>
+        <% end %>
+        <% if current_page.data.requirements %>
+          <div class="course-requirements"><b>Requirements:</b> <%= current_page.data.requirements.join(', ') %></div>
+        <% end %>
+        <% if current_page.data.concepts %>
+          <div class="course-concepts"><b>Concepts:</b> <%= current_page.data.concepts.join(', ') %></div>
+        <% end %>
+      </div>
 
-      <%= yield %>
+      <div class="course-body">
+        <%= yield %>
+      </div>
 
       <% if current_page.data.challenge %>
-        <p><b>Challenge:</b> <%= current_page.data.challenge %></p>
+        <div class="course-challenge">
+          <p><b>Challenge:</b> <%= current_page.data.challenge %></p>
+        </div>
       <% end %>
     </div>
   </body>

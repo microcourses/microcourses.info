@@ -8,11 +8,11 @@ h1
   font-weight: 400
   font-size: 7em
   text-align: center
-  span.subtitle
+  .subtitle
     font-family: $body-font-stack
     display: block
     color: #999
-  span.small
+  .small
     font-size: 0.2em
   a
     text-decoration: none
@@ -37,11 +37,22 @@ nav
   max-width: 900px
 
 pre
-  font: $mono-font-stack
+  border-radius: $border-radius
+  font-family: $mono-font-stack
   font-size: 0.9em
   padding: $gap
-  border-radius: $border-radius
+
+table
+  margin: 1em
+  th, td
+    text-align: left
+    vertical-align: left
+    padding: 0 $gap
+
+code
+  font-weight: bold
 
 @media print
   html
     font-size: 8px
+

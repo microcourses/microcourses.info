@@ -1,23 +1,26 @@
 ---
 title: Recursion
-duration: 1 hour
+duration: 2 hours
 stream: ruby
 layout: course
 requirements:
-  - Pen and paper
-  - Ruby
+  - pen and paper
+  - ruby command
+concepts:
+  - function stack
+  - stack depth
+  - stack unwinding
+  - local variable storage
+  - base case
+  - recursive case
 challenge: The (evil) government introduces 14 dollar notes. Update your program.
 ---
 
-Functions have names that you can use to call them. A function can use its own
-name to call itself. Such a function is called *recursive*. Today we will
-implement a *backtracking* search algorithm using a *recursive function*.
+Once a function is defined, it can be called using its name. A *recursive
+function* calls itself using its own name. Today you will use such a function
+to build an ATM that is stocked with 50 and 20 dollar notes.
 
-Somebody wants you to build an ATM that gives a combination of 50 and 20 dollar
-notes that sum to the requested number. If there is a choice, it gives bigger
-notes rather than smaller notes (100 is two 50s, not five 20s).
-
-These are the steps that a backtracking search will go through to give the person $70:
+These are the steps a backtracking search goes through to give somebody $70:
 
 | step  | notes     | remainder  | solution?  |
 | ----  | --------  | ---------  | ---------  |
@@ -39,20 +42,20 @@ These are the steps for $80:
 | 8     | 20,20,20,20  | 0          | yes        |
 
 The code below is a partial solution with some passing tests and some failing
-tests. Make all the tests pass!
+tests. Copy this code into a file named `atm.rb` and run it with the command
+`ruby atm.rb -v`. Make all the tests pass!
 
 ```ruby
-# Run this code with the command `ruby atm.rb -v`
 
 def atm(number)
-  if number <= 0             # no chance, buster
+  if number <= 0             # no chance, buster (base case)
     []
   elsif number == 20
-    [20]                     # OK, one 20 dollar note
+    [20]                     # OK fine, one 20 dollar note (base case)
   elsif number == 70
-    [50] + atm(number - 50)  # a 50, plus whatever other notes
+    [50] + atm(number - 50)  # a 50, plus whatever other notes (recursive case)
   else
-    []                       # um...
+    []                       # not sure, what do you think?
   end
 end
 
