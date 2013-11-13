@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="course">
+<html lang="en">
   <head>
     <meta charset="utf-8">
 
@@ -13,8 +13,8 @@
     <%= javascript_include_tag  "all" %>
   </head>
 
-  <body class="<%= page_classes %>">
-    <div class="course container">
+  <body class="course <%= page_classes %>">
+    <div class="container">
       <div class="course-header">
         <h2 class="course-title">
           <% if current_page.data.title %><%= current_page.data.title %><% end %>

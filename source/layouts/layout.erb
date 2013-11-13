@@ -11,15 +11,12 @@
 
     <%= stylesheet_link_tag "all" %>
     <%= javascript_include_tag  "all" %>
-    <%# <link href='http://fonts.googleapis.com/css?family=Engagement|Source+Code+Pro:400,600|Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'> %>
-    <link href='http://fonts.googleapis.com/css?family=Just+Me+Again+Down+Here' rel='stylesheet' type='text/css'>
+    <script src="//use.edgefonts.net/source-sans-pro.js"></script>
   </head>
 
-  <body class="<%= page_classes %>">
-    <div class="main container">
-      <%= partial "layouts/gh_ribbon" %>
+  <body class="info-page <%= page_classes %>">
+    <div class="container">
       <%= partial "layouts/header" %>
-      <%# partial "layouts/nav" %>
 
       <% if current_page.data.title %>
         <h2 class="page-title"><%= current_page.data.title %></h2>

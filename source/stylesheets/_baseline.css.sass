@@ -1,22 +1,13 @@
 @import vars
 
-body
-  font-family: $body-font-stack
+$page-width: 700px
 
-h1
-  font-family: $title-font-stack
-  font-weight: 400
-  font-size: 7em
-  text-align: center
-  .subtitle
-    font-family: $body-font-stack
-    display: block
-    color: #999
-  .small
-    font-size: 0.2em
-  a
-    text-decoration: none
-    color: inherit
+html
+  font-family: source-sans-pro, 'PT Sans', 'Helvetica Neue', Calibri, 'Droid Sans', Helvetica, Arial, sans-serif
+  font-size: 18px
+  @media print
+    &
+      font-size: 8px
 
 nav
   ul
@@ -31,19 +22,12 @@ nav
       float: left
       padding: 0 $gap
 
-.container
-  margin: 0 auto
-  width: 90%
-  max-width: 900px
-
 pre
   border-radius: $border-radius
-  font-family: $mono-font-stack
   font-size: 0.9em
   padding: $gap
 
 table
-  margin: 1em
   th, td
     text-align: left
     vertical-align: left
@@ -52,7 +36,7 @@ table
 code
   font-weight: bold
 
-@media print
-  html
-    font-size: 8px
-
+.container
+  margin: 0 auto
+  width: 90%
+  max-width: $page-width
