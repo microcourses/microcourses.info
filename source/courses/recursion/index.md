@@ -13,9 +13,9 @@ concepts:
 challenge: The (evil) government introduces 14 dollar notes. Update your program.
 ---
 
-Once a function is defined, it can be called using its name. A *recursive
-function* calls itself using its own name. Today you will use such a function
-to build an ATM that is stocked with 50 and 20 dollar notes.
+A **recursive function** is one that calls itself using its own name.
+Today you will use such a function to build an ATM stocked with 50 and 20 dollar notes.
+The algorithm you will implement is called **backtracking**.
 
 These are the steps a backtracking search goes through to give somebody $70:
 
@@ -61,11 +61,11 @@ require 'minitest/autorun'
 
 describe 'atm' do
   [
-    [  0,  [] ],
-    [  70, [50, 20] ],
+    [   0, []               ],
+    [  70, [50, 20]         ],
     [  80, [20, 20, 20, 20] ],
-    [ 100, [50, 50] ],
-    [ 101, [] ],
+    [ 100, [50, 50]         ],
+    [ 101, []               ],
   ].each do |input, expected|
     it "should convert the number #{input} to #{expected}" do
       atm(input).must_equal expected
