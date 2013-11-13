@@ -13,6 +13,7 @@ concepts:
   - ruby macros
   - object-relational mapping
 challenge:
+published: false
 ---
 
 Relational databases store tables of information much like spreadsheets. For
