@@ -6,11 +6,8 @@ layout: course
 requirements:
   - pen and paper
   - ruby command
+  - functions
 concepts:
-  - function stack
-  - stack depth
-  - stack unwinding
-  - local variable storage
   - base case
   - recursive case
 challenge: The (evil) government introduces 14 dollar notes. Update your program.
