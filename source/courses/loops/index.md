@@ -8,20 +8,28 @@ requirements:
 concepts:
   - basic input/output
   - terminal colours
-  - loops
+  - counters
+  - top/bottom testing
+  - for loops
 challenge: Use the sleep command to animate the output. Be artistic.
 published: false
 ---
 
+# TODO: Flesh out these topics
+
+* Boolean ending conditions
+* Top-testing versus bottom testing (until, while)
+* Higher level loops: for loops, data structure iteration
+
 ```ruby
 COLORS = [
+  GRAY = "\e[01;30m",
   RED = "\e[01;31m",
   GREEN = "\e[01;32m",
   YELLOW = "\e[01;33m",
   BLUE = "\e[01;34m",
   PINK = "\e[01;35m",
   CYAN = "\e[0;36m",
-  GRAY = "\e[01;30m",
 ]
 RESET="\e[0m"
 
