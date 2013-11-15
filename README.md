@@ -124,3 +124,7 @@ Usual drill:
   * `middleman` to launch the development web server
   * visits `http://0.0.0.0:4567`
 3. Send us a GitHub Pull Request
+
+------------
+
+This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License.
