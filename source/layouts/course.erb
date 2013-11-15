@@ -43,9 +43,6 @@
         </div>
       <% end %>
     </div>
+    <%= partial 'layouts/ga' %>
   </body>
-
-  <% if build? %>
-    <script type="text/javascript"><%= analytics data.project.ga %></script>
-  <% end %>
 </html>

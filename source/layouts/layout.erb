@@ -9,24 +9,22 @@
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "Microcourses" %></title>
 
-    <%= stylesheet_link_tag "all" %>
-    <%= javascript_include_tag  "all" %>
+    <%= stylesheet_link_tag 'all' %>
+    <%= javascript_include_tag  'all' %>
     <script src="//use.edgefonts.net/source-sans-pro.js"></script>
   </head>
 
   <body class="info-page <%= page_classes %>">
     <div class="container">
-      <%= partial "layouts/header" %>
+      <%= partial 'layouts/header' %>
 
       <% if current_page.data.title %>
         <h2 class="page-title"><%= current_page.data.title %></h2>
       <% end %>
 
       <%= yield %>
-      <%= partial "layouts/footer" %>
+      <%= partial 'layouts/footer' %>
     </div>
+    <%= partial 'layouts/ga' %>
   </body>
-  <% if build? %>
-  <script type="text/javascript"><%= analytics data.project.ga %></script>
-  <% end %>
 </html>
