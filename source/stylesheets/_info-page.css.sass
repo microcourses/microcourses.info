@@ -8,6 +8,10 @@ $pretty-band-height: $gap*5
   margin: 6*$gap 0
   text-align: center
 
+  a
+    color: inherit
+    text-decoration: none
+
   .title
     font-family: $title-font
     font-size: 4em
@@ -22,9 +26,21 @@ $pretty-band-height: $gap*5
     &:before
       content: '// '
 
+.page-footer
+  border-top: 1px dashed $fg-muted-color
+  margin-top: 2*$gap
+  padding-top: 2*$gap
+  color: $fg-muted-color
+  font-size: 0.9rem
+
+  .copyright
+    text-align: right
+
   a
-    color: inherit
-    text-decoration: none
+    color: $fg-muted-color
+    &:hover
+      color: darken($fg-muted-color, 10%)
+
 
 .info-page
   position: relative
