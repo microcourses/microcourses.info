@@ -1,5 +1,6 @@
 @import compass/css3/transform
 @import vars
+@import responsive
 
 $title-font: monospace
 $pretty-band-height: $gap*5
@@ -14,17 +15,23 @@ $pretty-band-height: $gap*5
 
   .title
     font-family: $title-font
-    font-size: 4em
     line-height: 1
     margin: 0
+    +responsive(small)
+      font-size: 2em
+    +responsive(medium large)
+      font-size: 4em
 
   .subtitle
     font-family: $title-font
     color: $fg-muted-color
-    font-size: 1.2em
     padding-top: 2*$gap
-    &:before
-      content: '// '
+    +responsive(small)
+      font-size: 1em
+    +responsive(medium large)
+      font-size: 1.2em
+      &:before
+        content: '// '
 
 .page-footer
   border-top: 1px dashed $fg-muted-color

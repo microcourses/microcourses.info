@@ -1,8 +1,12 @@
 @import vars
+@import responsive
 
 .course
   font-family: monospace
-  font-size: 12px
+  +responsive(small)
+    font-size: 10px
+  +responsive(medium large)
+    font-size: 12px
 
   .course-title
     float: left
@@ -10,11 +14,13 @@
   .course-header
     overflow: hidden // clearfix
     h2, .home-link
-      font-size: 2em
       margin: $gap 0
       font-weight: bold
+      +responsive(small)
+        font-size: 12px
+      +responsive(medium large)
+        font-size: 24px
 
   .home-link
     float: right
     text-decoration: none
-
