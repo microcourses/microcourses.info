@@ -39,15 +39,3 @@ We believe that mentoring relationships can set students in the right
 direction, bridge gaps in educational offerings, and fill or consolidate areas
 of knowledge for programmers, whether they are experienced or not.
 
-
-### Topics
-
-These are a real work in progress! If you would like to contribute, you are
-invited to join our fledgeling microcourse workshop community at
-<%= data.project.repo %>
-
-<% sitemap.resources.each do |page| %>
-  <% if page.data.published != false and page.path.start_with?('courses/') %>
-  * <%= link_to page.data.title, url_for(page) %>
-  <% end %>
-<% end %>

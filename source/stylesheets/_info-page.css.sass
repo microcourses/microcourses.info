@@ -33,6 +33,19 @@ $pretty-band-height: $gap*5
       &:before
         content: '// '
 
+  nav
+    padding-top: 2*$gap
+    font-family: $title-font
+    color: $fg-muted-color
+    a.active, a:hover
+      color: #000
+    a:before
+      content: '| '
+      color: $fg-muted-color
+    a:first-child:before
+      content: ''
+
+
 .page-footer
   border-top: 1px dashed $fg-muted-color
   margin-top: 2*$gap
