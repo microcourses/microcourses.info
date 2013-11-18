@@ -4,8 +4,9 @@ title: Topics
 
 These are a real work in progress! If you would like to contribute, you are invited to join our fledgeling microcourse workshop community at <%= data.project.repo %>
 
-<% sitemap.resources.each do |page| %>
-  <% if page.data.published != false and page.path.start_with?('courses/') %>
+<% streams.each do |stream| %>
+  <h4><%= stream.titlecase %></h4>
+  <% course_pages(stream).each do |page| %>
   * <%= link_to page.data.title, url_for(page) %>
   <% end %>
 <% end %>

@@ -36,4 +36,21 @@ helpers do
     File.read(File.dirname(caller_locations(1, 1).first.path) + '/' + filename) +
     "```\n"
   end
+
+  def streams
+    sitemap.resources.select do |page|
+      page.data.published != false
+    end.map do |page|
+      page.data.stream
+    end.uniq.compact
+  end
+
+  def course_pages(stream)
+    sitemap.resources.select do |page|
+      page.data.stream == stream and
+      page.data.published != false and
+      page.path.start_with?('courses/') and
+      File.basename(page.source_file).start_with?('index')
+    end
+  end
 end
