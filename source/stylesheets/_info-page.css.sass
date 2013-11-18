@@ -48,19 +48,28 @@ $pretty-band-height: $gap*5
 
 .page-footer
   border-top: 1px dashed $fg-muted-color
-  margin-top: 2*$gap
-  padding-top: 2*$gap
   color: $fg-muted-color
-  font-size: 0.9rem
+  font-size: 0.8rem
+  margin-top: 2*$gap
+  overflow: hidden // clearfix
+  padding-top: 2*$gap
+  text-transform: lowercase
 
   .copyright
     text-align: right
+    img
+      vertical-align: middle
 
   a
     color: $fg-muted-color
     &:hover
       color: darken($fg-muted-color, 10%)
 
+  .left
+    float: left
+
+  .right
+    float: right
 
 .info-page
   position: relative
