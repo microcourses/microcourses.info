@@ -6,45 +6,54 @@ $title-font: Courier, 'Courier New', monospace
 $pretty-band-height: $gap*5
 
 .page-header
-  margin: 6*$gap 0
   text-align: center
 
+  +responsive(medium large)
+    margin: $big-gap 0
   a
     color: inherit
     text-decoration: none
 
   .title
+    margin: $big-gap 0
     font-family: $title-font
     line-height: 1
-    margin: 0
     +responsive(small)
       font-size: 2em
-    +responsive(medium large)
+    +responsive(medium)
+      font-size: 3em
+    +responsive(large)
       font-size: 4em
 
   .subtitle
     font-family: $title-font
     color: $fg-muted-color
-    padding-top: 2*$gap
+    margin: $big-gap 0
     +responsive(small)
-      font-size: 1em
+      display: none
     +responsive(medium large)
-      font-size: 1.2em
       &:before
         content: '// '
 
-  nav
-    padding-top: 2*$gap
-    font-family: $title-font
-    color: $fg-muted-color
-    a.active, a:hover
-      color: #000
-    a:before
-      content: '| '
-      color: $fg-muted-color
-    a:first-child:before
-      content: ''
+.page-nav
+  font-family: $title-font
+  color: $fg-muted-color
+  +responsive(small)
+    padding-bottom: $gap
+    border-bottom: 3px solid black
+    line-height: 2em
+  a
+    +responsive(medium large)
+      &:before
+        content: '| '
+      &:first-child:before
+        content: ''
 
+    &:active, &:hover, &.active
+      color: #000
+
+  +responsive(medium large)
+    margin: $big-gap 0
 
 .page-footer
   border-top: 1px dashed $fg-muted-color
