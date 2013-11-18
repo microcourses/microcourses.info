@@ -30,4 +30,10 @@ helpers do
     options[:class] << " active" if url == current_page.url
     link_to(link_text, url, options)
   end
+
+  def ruby(filename)
+    "```ruby\n" +
+    File.read(File.dirname(caller_locations(1, 1).first.path) + '/' + filename) +
+    "```\n"
+  end
 end
