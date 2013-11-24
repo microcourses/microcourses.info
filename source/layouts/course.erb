@@ -44,7 +44,7 @@
         <ul class="course-links">
           <li><%= link_to('Send us your feedback', url_for(data.project.repo + 'issues/new'),
               query: { title: 'Feedback for "' + current_page.data.title + '"', labels: 'feedback' }) %>
-        <li><%= link_to 'Write your own microcourse', url_for('/writing.html') %>
+        <li><%= link_to 'Write your own microcourse', '/mentors.html' %>
         </ul>
       </div>
     </div>
