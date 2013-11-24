@@ -51,6 +51,8 @@ helpers do
       page.data.published != false and
       page.path.start_with?('courses/') and
       File.basename(page.source_file).start_with?('index')
+    end.sort_by do |page|
+      page.data.order.to_i
     end
   end
 end
