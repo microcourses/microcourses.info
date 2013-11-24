@@ -31,14 +31,24 @@
 
       <div class="course-body">
         <%= yield %>
+
+        <% if current_page.data.challenge %>
+          <div class="course-challenge">
+            <p><b>Challenge:</b> <%= current_page.data.challenge %></p>
+          </div>
+        <% end %>
       </div>
 
-      <% if current_page.data.challenge %>
-        <div class="course-challenge">
-          <p><b>Challenge:</b> <%= current_page.data.challenge %></p>
-        </div>
-      <% end %>
+      <div class="course-footer online-only">
+        <strong class="footer-title">Get involved</strong>
+        <ul class="course-links">
+          <li><%= link_to('Send us your feedback', url_for(data.project.repo + 'issues/new'),
+              query: { title: 'Feedback for "' + current_page.data.title + '"', labels: 'feedback' }) %>
+        <li><%= link_to 'Write your own microcourse', url_for('/writing.html') %>
+        </ul>
+      </div>
     </div>
+
     <%= partial 'layouts/ga' %>
   </body>
 </html>
