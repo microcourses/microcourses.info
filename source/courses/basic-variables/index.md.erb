@@ -1,0 +1,65 @@
+---
+title: Basic Variables
+duration: 1 hour
+stream: ruby
+order: 10
+layout: course
+requirements:
+  - ruby command
+concepts:
+  - basic input/output
+  - assignment, integers, strings, booleans, dates
+challenge: Ask for two dates and print the number of days between them.
+---
+
+Imagine asking somebody, "What's your favourite colour?" When you do, you make a mental box in your head labelled "their favourite colour". When the person says "purple", in your head you assign the value "purple" to the label "their favourite colour".
+
+* Computer programming is designed to mimic this human way of working.
+* Information is stored in a computer's *memory* much like human memory, so that it can be used later.
+* The word *variable* refers to a single named piece of information in the computer's memory such as a number, word, sentence or date.
+* We call them *variables* because they can change value during a computer program, and to distinguish them from *constants* which are the same but are not permitted
+to change while the program is running. e.g. the value of &pi; (pi) is a constant.
+
+If you studied algebra, a lot of the same rules apply. In algebra, `x` is a placeholder for a value. Some algebraic expressions vary over time also, such as `f(t)`. The way we program computers owes a lot to mathematics and algebra.
+
+One way to understand variables is to imagine them as boxes in your cupboard with labels on them and something inside, where each box holds one thing at most.
+
+        +-------------------+
+       /                   /|
+      /     "purple"      / /    value
+     /                   / /
+    +-------------------+ /
+    | favourite_colour  |/       variable name
+    +-------------------+
+
+Another way to think about variables that is more accurate for some programming languages (like Ruby) is to imagine they are signposts. The word on the sign is the name of the variable, like the label on the box, and the thing the sign points to is its value. You can turn the sign around so it points at something different (a different location inside the computer's memory), or you can alter the thing the sign points to by modifying the value in some way. The proper terminology for the signpost is a *reference* and the thing it points to is a *value*.
+
+    +---------------------+          +----------+
+    | favourite colour -> |          | "purple" |
+    +---------------------+          +----------+
+              ||
+
+           reference                     value
+
+The act of labelling a box, or making a sign that points to something is called *assignment*. We "assign a value to a variable". That looks like this:
+
+```ruby
+favourite_colour = "purple"
+```
+
+The equals sign in computer programs does not mean the same thing as it does in maths! It means "put the value on the right into the box on the left" or equivalently "point the name on the left to the value on the right". Consider the following program:
+
+```ruby
+t = 0       # => 0
+t = t + 1   # => 1
+t = t + 1   # => 2
+```
+
+There are different types of variables. Today we will learn about integers, strings, booleans and if you are feeling adventurous, dates.
+
+Write a program that will:
+
+* Ask you what your birth date is and tell you your age in "dog years".
+* Ask you the distance to work and average speed you travel and tell you how long it will probably take to get to work.
+* Ask you what your name is and say hello to you in a foreign language (you may have to put the line `# encoding: UTF-8` at the top of your program).
+* Ask you whether you are a mammal and then ask you if you lay eggs and then tell you if you are a monotreme.
