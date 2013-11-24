@@ -2,12 +2,13 @@
 @import responsive
 
 .course
-  font-family: monospace
+  font-family: $monospace-font-family
+  +responsive(small)
+    font-size: 10px
+  +responsive(medium large)
+    font-size: 15px
   @media print
-    +responsive(small)
-      font-size: 10px
-    +responsive(medium large)
-      font-size: 12px
+    font-size: 12px
 
   .course-title
     float: left
