@@ -3,10 +3,11 @@
 
 .course
   font-family: monospace
-  +responsive(small)
-    font-size: 10px
-  +responsive(medium large)
-    font-size: 12px
+  @media print
+    +responsive(small)
+      font-size: 10px
+    +responsive(medium large)
+      font-size: 12px
 
   .course-title
     float: left
