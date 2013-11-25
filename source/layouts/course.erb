@@ -12,9 +12,9 @@
   <body class="course <%= page_classes %>">
     <div class="container">
       <div class="course-header">
-        <h2 class="course-title">
+        <h1 class="course-title">
           <% if current_page.data.title %><%= current_page.data.title %><% end %>
-        </h2>
+        </h1>
         <%= link_to 'Microcourses', url_for('/index.html'), class: 'home-link' %>
       </div>
       <div class="course-metadata">

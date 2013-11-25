@@ -27,8 +27,8 @@ end
 helpers do
   def nav_link(link_text, url, options = {})
     options[:class] ||= ""
-    options[:class] << " active" if url == current_page.url
-    link_to(link_text, url, options)
+    options[:class] << " active" if url.end_with?(current_page.path)
+    link_to(link_text, url_for(url), options)
   end
 
   def ruby(filename)

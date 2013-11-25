@@ -2,22 +2,39 @@
 title: Mentors
 ---
 
-If you are a developer that likes teaching, you are a kindred spirit. Welcome!
+### Running a microcourse
 
-### Becoming a mentor
+Are you are a developer that likes teaching? You are a kindred spirit. Welcome!
 
-Please come to [Sydney Ruby on Rails Development Hub](http://www.reinteractive.net/community/development_hub) and volunteer to teach. No preparation is needed.
+We'll be running our experiments at [Sydney Ruby on Rails Development Hub](http://www.reinteractive.net/community/development_hub), so if you'd like to come along and participate, please do. No preparation is needed.
 
-Hopefully in future microcourses will be held at other community events like Rails Girls and Rails Camp.
+If you don't live in Sydney, please run a microcourse and send us feedback.
 
-### Holding a microcourse
+#### Advice for running a microcourse
 
-The idea is that at events like Rails Camp, InstallFest, Development Hub and Rails Girls, a developer such as yourself would use the content here to teach 1-3 students.
+* Use the student's computer.
+* Let the student do all the typing, even to configure or install software.
+* Set aside 2 hours, more if you think your student might need to install software.
+* Ask the student for 5 minutes so you can read over the material. You should not need any other preparation. Ensure you feel comfortable with the material.
+* If you are not familiar with the student, ask if they have programmed before. If so, what languages?
+* Close the computer or move away from it to begin with. Describe the concepts involved and draw any pictures you feel would help, preferably into the student's notebook. Try to get the student clear about what the goal is and what the algorithm or approach will be.
+* If it seems too *easy*, just finish early and then challenge your student with the supplied challenge or one that either your student or yourself comes up with.
+* If it seems too *hard*, take a break. You have several options:
+  * Consider whether going back to pen and paper for a little would get the student unstuck.
+  * Consider cutting the session short and selecting a different microcourse before coming back to this one.
+  * Consider that the course material itself may not be ideal, and send us feedback or pull requests to improve it.
 
-You could run a *microcourse* or hold a *microcourses session*. People could choose which course they want to take or teach and group up. There could be several microcourses going on at the same time.
+### Writing a microcourse
 
-Both mentors and students should be able to turn up with no preparation and be involved.
+You'd like to write a microcourse? Here is how!
 
-### I'd like to be involved in this project
-
-Great! Fork [the project on GitHub](<%= data.project.repo %>) and write a course, we love pull requests. Or create an issue in the issue tracking system there, or just drop us a line.
+1. Ensure you have a <%= link_to 'GitHub', 'https://github.com/' %> account.
+2. <%= link_to 'Fork', url_for(data.project.repo + 'fork') %> our repository.
+3. Clone your own copy of the repository as per the instructions on its GitHub page.
+4. Add a file such as `microcourses/source/courses/bake-a-pretty-cake/index.md.erb` and
+   write your course there in [Markdown](http://daringfireball.net/projects/markdown/syntax).
+   (Copy and paste one of the other files and change it.)
+5. Follow the guidelines here as best you can.
+6. When you're ready, send us a GitHub pull request and we'll read and review
+   your submission.
+7. Be warmed in the glow of our gratitude.
