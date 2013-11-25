@@ -38,21 +38,25 @@ helpers do
   end
 
   def streams
-    sitemap.resources.select do |page|
-      page.data.published != false
-    end.map do |page|
-      page.data.stream
-    end.uniq.compact
+    published_resources.map{|page| page.data.stream }.uniq.compact
   end
 
   def course_pages(stream)
+    unsorted_course_pages(stream).sort_by{|page| page.data.order.to_i }
+  end
+
+  private
+
+  def published_resources
+    sitemap.resources.select{|page| page.data.published != false }
+  end
+
+  def unsorted_course_pages(stream)
     sitemap.resources.select do |page|
       page.data.stream == stream and
       page.data.published != false and
       page.path.start_with?('courses/') and
       File.basename(page.source_file).start_with?('index')
-    end.sort_by do |page|
-      page.data.order.to_i
     end
   end
 end
