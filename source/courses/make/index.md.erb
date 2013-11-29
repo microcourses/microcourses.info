@@ -1,0 +1,38 @@
+---
+title: Make
+duration: 30 mins
+stream: tools
+layout: course
+requirements:
+  - pen and paper
+  - basic build tools, make command, cc command
+concepts:
+  - dependency build tools
+---
+
+* Tools like Make are designed to save you time by **only compiling the files
+  that changed**.
+* They are called **dependency build tools** because they achieve this by
+  tracking which files depend on which files.
+* They can also run jobs on multiple CPU cores to speed things up.
+
+Create the following files:
+
+<%= file('Makefile', 'make') %>
+
+This cryptic command links several compiled C modules together into an
+executable. Note that the second line in this file may need to be indented with
+a tab character, not spaces.
+
+<%= file('main.c', 'c') %>
+<%= file('file_format.h', 'c') %>
+<%= file('file_format.c', 'c') %>
+
+Now at the command prompt you can build and run the project like so:
+
+```
+make && ./word
+```
+
+Try re-running the command, editing different files, and re-running the
+command above. Pay attention to which files are built each time.
