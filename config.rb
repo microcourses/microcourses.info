@@ -31,10 +31,22 @@ helpers do
     link_to(link_text, url_for(url), options)
   end
 
-  def ruby(filename)
-    "```ruby\n" +
-    File.read(File.dirname(caller_locations(1, 1).first.path) + '/' + filename) +
-    "```\n"
+  def ruby_file(filename)
+    file(filename, 'ruby')
+  end
+
+  def file(filename, format=nil)
+    require 'pathname'
+    require 'middleman'
+    url_path = url_for(filename)
+    disk_path = sitemap.find_resource_by_path(url_path).source_file
+    code = File.read(disk_path).strip
+%{
+<div class="code-filename"><a href="#{url_path}">#{filename}</a></div>
+```#{format}
+#{code}
+```
+}
   end
 
   def streams
