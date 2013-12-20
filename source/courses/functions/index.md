@@ -2,6 +2,7 @@
 title: Functions
 duration: 1 hour
 stream: ruby
+order: 40
 layout: course
 requirements:
   - pen and paper
