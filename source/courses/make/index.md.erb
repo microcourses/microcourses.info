@@ -14,24 +14,41 @@ concepts:
   that changed**.
 * They are called **dependency build tools** because they achieve this by
   tracking which files depend on which files.
-* They can also run jobs on multiple CPU cores to speed things up.
+* They can also build multiple files at once (on different CPUs) to speed things up.
 
 Create the following files:
 
 <%= file('Makefile', 'make') %>
-
-This cryptic command links several compiled C modules together into an
-executable. Note that the second line in this file may need to be indented with
-a tab character, not spaces.
-
 <%= file('main.c', 'c') %>
 <%= file('file_format.h', 'c') %>
 <%= file('file_format.c', 'c') %>
+
+This is a drawing of the dependency graph, which is how all of the files (including those that are going to be created by the compiler) depend upon one another. The arrows here mean "depends on".
+
+    word
+      |
+      +-------> file_format.o
+      |           |
+      |           +-------> file_format.c
+      |           |
+      |           +-------> file_format.h
+      |
+      +-------> main.o
+                  |
+                  +-------> main.c
+
+* The Makefile command links two modules together into an executable file.
+* `main.o` and `file_format.o` are the *dependencies*.
+* If the file on the left exists, it is not rebuilt.
+* We don't have to specify how to build an .o file out of a .c file because make has a built in rule for that already. It's kinda cryptic but just so you know, it looks like this: `%.o : %.c; $(CC) -c $(CFLAGS) $(CPPFLAGS) $< -o $@`
+* We do have to tell make to rebuild `file_format.o` if `file_format.h` changes
+because that isn't assumed by a built in rule.
 
 Now at the command prompt you can build and run the project like so:
 
 ```
 make && ./word
+ls -l
 ```
 
 Try re-running the command, editing different files, and re-running the
