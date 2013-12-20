@@ -24,6 +24,8 @@ configure :build do
   set :relative_links, true
 end
 
+I18n.enforce_available_locales = false
+
 helpers do
   def nav_link(link_text, url, options = {})
     options[:class] ||= ""
@@ -35,14 +37,15 @@ helpers do
     file(filename, 'ruby')
   end
 
-  def file(filename, format=nil)
+  def file(relative_path, format=nil)
     require 'pathname'
     require 'middleman'
-    url_path = url_for(filename)
-    disk_path = sitemap.find_resource_by_path(url_path).source_file
+    course_dir = Pathname.new(caller_locations(1, 1).first.path).dirname
+    disk_path = course_dir.join(relative_path)
+    url_path = relative_path
     code = File.read(disk_path).strip
 %{
-<div class="code-filename"><a href="#{url_path}">#{filename}</a></div>
+<div class="code-filename"><a href="#{url_path}">#{relative_path}</a></div>
 ```#{format}
 #{code}
 ```
