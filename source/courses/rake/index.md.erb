@@ -12,6 +12,7 @@ concepts:
   - running multiple tasks
   - passing parameters
   - creating a task
+challenge: Pass the name you want as a parameter.
 ---
 
 Rake is a **dependency build tool** like Make written in Ruby and used in Rails
@@ -30,6 +31,8 @@ Rails uses rake tasks like `rake db:migrate` rather than commands like `rails
 server` so that if you create your own tasks, you can re-use the Rails tasks
 easily if you need them. For example, sometimes you will want to ensure the
 database is migrated before performing your own custom task.
+
+Let's make some models to play with.
 
 ```
 rails g model user name:string
