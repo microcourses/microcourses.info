@@ -1,0 +1,58 @@
+---
+title: Rake
+duration: 30 minutes
+stream: rails
+layout: course
+requirements:
+  - ruby command
+  - rails command
+concepts:
+  - listing tasks
+  - running tasks
+  - running multiple tasks
+  - passing parameters
+  - creating a task
+---
+
+Rake is a **dependency build tool** like Make written in Ruby and used in Rails
+projects. Dependency build tools help you define complex or interdependent
+project tasks such as compiling files.
+
+Create a new Rails project. `rails new blog` and `cd blog/` and try the
+following commands:
+
+```
+rake -T # list all the built in tasks
+rake -D # describe all the built in tasks in detail
+```
+
+Rails uses rake tasks like `rake db:migrate` rather than commands like `rails
+server` so that if you create your own tasks, you can re-use the Rails tasks
+easily if you need them. For example, sometimes you will want to ensure the
+database is migrated before performing your own custom task.
+
+```
+rails g model user name:string
+rails g model post user_id:integer content:string
+```
+
+Now you have some migrations that you can manipulate with rake tasks. Try
+running each of these. Notice that you can pass arguments to some rake tasks.
+
+```
+rake db:migrate
+rake db:rollback
+rake db:migrate:status
+rake db:migrate
+rake -D db:rollback
+rake db:rollback STEP=2
+```
+
+You can create your own tasks in a Rails application by putting them in a file
+such as `lib/tasks/mytask.rake` directory.
+
+<%= file('mytask.rake', 'ruby') %>
+
+Running this task will fail. Your exercise is to figure out why and make it
+pass. Hint: you will need to add dependency on a built-in task. `rake -P` will
+help you see what built-in dependencies are available.
