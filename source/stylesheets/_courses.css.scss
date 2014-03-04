@@ -1,0 +1,39 @@
+
+
+.courses_page {
+  h2 {
+    border-bottom: 1px solid #ccc;
+  }
+
+  .course_preview {
+    width: 50%;
+    float: left;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+
+  h4, h4 a {
+    color: #a5162f;
+    text-decoration: none;
+    font-weight: normal;
+  }
+
+  h4 a:hover {
+    text-decoration: underline;
+  }
+
+  h4 {
+    margin-bottom: 0;
+
+    .duration {
+      font-style: italic;
+      font-size: 0.9em;
+    }
+  }
+
+  .course-concepts {
+    font-size: 15px;
+  }
+}

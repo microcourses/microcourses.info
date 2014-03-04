@@ -4,9 +4,23 @@ title: Courses
 
 These are a real work in progress! If you would like to contribute, you are invited to join our fledgeling <%= link_to 'microcourse community', data.project.repo + 'issues/' %>.
 
-<% streams.each do |stream| %>
-  <h4><%= stream.titlecase %></h4>
-  <% course_pages(stream).each do |page| %>
-    <li><%= link_to page.data.title, url_for(page) %>
+<div class="courses_page">
+  <% streams.each do |stream| %>
+    <h2><%= stream.titlecase %></h2>
+    <% course_pages(stream).each do |page| %>
+      <div class="course_preview">
+        <h4>
+          <%= link_to page.data.title, url_for(page) %>
+          <span class="duration">
+            <%= '(' + page.data.duration + ')' if page.data.duration %>
+          </span>
+        </h4>
+        <% if page.data.concepts %>
+          <div class="course-concepts"><b>Concepts:</b> <%= page.data.concepts.join(', ') %></div>
+        <% end %>
+
+      </div>
+    <% end %>
+    <div style="clear: both;"></div>
   <% end %>
-<% end %>
+</div>
