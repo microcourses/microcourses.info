@@ -3,19 +3,22 @@ set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
 ignore '/courses/_template*'
+ignore '/courses/**/*.rb'
+ignore '**/*.rb'
 
 activate :directory_indexes
 activate :livereload
-activate :rouge_syntax # Code highlighting
+activate :syntax
 
-set :markdown_engine, :redcarpet
-set :markdown, {
+set(:markdown_engine, :redcarpet)
+set(
+  :markdown,
   fenced_code_blocks: true,
   smartypants: true,
   tables: true,
   autolink: true,
   gh_blockcode: true,
-}
+)
 
 configure :build do
   activate :minify_css
@@ -37,9 +40,10 @@ helpers do
     file(filename, 'ruby')
   end
 
-  def file(relative_path, format=nil)
+  def file(relative_path, format = nil)
     require 'pathname'
     require 'middleman'
+
     course_dir = Pathname.new(caller_locations(1, 1).first.path).dirname
     disk_path = course_dir.join(relative_path)
     url_path = relative_path
@@ -63,15 +67,15 @@ helpers do
   private
 
   def published_resources
-    sitemap.resources.select{|page| page.data.published != false }
+    sitemap.resources.reject{|page| page.data.published == false }
   end
 
   def unsorted_course_pages(stream)
     sitemap.resources.select do |page|
-      page.data.stream == stream and
-      page.data.published != false and
-      page.path.start_with?('courses/') and
-      File.basename(page.source_file).start_with?('index')
+      page.data.stream == stream &&
+        page.data.published != false &&
+        page.path.start_with?('courses/') &&
+        File.basename(page.source_file).start_with?('index')
     end
   end
 end

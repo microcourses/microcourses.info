@@ -1,4 +1,4 @@
-@import vars
+@import _vars
 
 $page-width: 700px
 
@@ -14,11 +14,13 @@ html
   border-bottom-right-radius: $border-radius
   font-size: 0.9em
   padding: $gap
+  margin-bottom: 1em
+  > .highlight
+    margin: 0
 
 .code-filename
   border-top-left-radius: $border-radius
   border-top-right-radius: $border-radius
-  margin-bottom: -1em
   background-color: #eee
   padding: 0 $gap
   line-height: 1.5

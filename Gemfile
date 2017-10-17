@@ -1,14 +1,12 @@
-# If you have OpenSSL installed, we recommend updating
-# the following line to use "https"
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 
-gem 'middleman'
-
-# Live-reloading plugin
-gem 'middleman-livereload'
-
-gem 'redcarpet'
-gem 'middleman-rouge'
+gem 'middleman', '~> 4.2'
+gem 'middleman-autoprefixer', '~> 2.7'
 gem 'middleman-gh-pages'
-
-gem 'pry-debugger'
+gem 'middleman-livereload'
+gem 'middleman-syntax'
+gem 'opal'
+gem 'pry-byebug'
+gem 'redcarpet'
+gem 'tzinfo-data', platforms: %i[mswin mingw jruby]
+gem 'wdm', '~> 0.1', platforms: %i[mswin mingw]

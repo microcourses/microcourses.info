@@ -2,8 +2,6 @@
 title: Courses
 ---
 
-These are a real work in progress! If you would like to contribute, you are invited to join our fledgeling <%= link_to 'microcourse community', data.project.repo + 'issues/' %>.
-
 <div class="courses_page">
   <% streams.each do |stream| %>
     <h2><%= stream.titlecase %></h2>
@@ -18,7 +16,6 @@ These are a real work in progress! If you would like to contribute, you are invi
         <% if page.data.concepts %>
           <div class="course-concepts"><b>Concepts:</b> <%= page.data.concepts.join(', ') %></div>
         <% end %>
-
       </div>
     <% end %>
     <div style="clear: both;"></div>
