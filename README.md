@@ -1,4 +1,4 @@
-# For now, read the [wiki](https://github.com/puyo/microcourses/wiki)
+# For now, read the [wiki](https://github.com/microcourses/microcourses.info/wiki)
 
 For lots more info, read this:
 http://joshuapaling.com/post/rails-camp-micro-courses
